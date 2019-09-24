@@ -270,3 +270,17 @@ a.no-color {
 .footer-item {
     padding: 100px;
 }
+
+.blinking{
+    animation:blinkingText 8.0s infinite;
+}
+@keyframes blinkingText{
+    35%{     color: #900;    }
+    30%{    color: transparent; }
+    35%{   color: #400;    }
+}
+
+.middleBig {
+    font-weight: bold;
+    font-size: 20px;
+}

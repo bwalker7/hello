@@ -6,7 +6,7 @@
             type="image/png"
             href="./resources/favicon.jpg">
       <title>Lego Town</title>
-
+      
       <link href="styles/my-style.css" rel="stylesheet"/>
 
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
@@ -17,11 +17,12 @@
     <body>
 
       <div id="nav-bar-holder">
+       
         <span class="nav-item">
           <a href="#linktotown" rel="" id="anchor1" class="no-color">Our Town</a>
         </span>
         <span class="nav-item">
-          <a href="/static_pages/jobs" class="no-color">Jobs</a>
+          <a href="/static_pages/jobs" class="no-color">Jobs - haha</a>
         </span>
         <span class="nav-item">
           <a href="/static_pages/living" class="no-color">Living</a>
@@ -30,9 +31,54 @@
           <a href="/static_pages/fun" class="no-color">Fun</a>
         </span>
       </div>
+      <p>
+        <p>
+          space
+        <center>
+            <span class="blinking"><div class="big">Warning: Evacuate LegoTown: Zombie Apocalypse</div></span>
+        </center>
+       </p>
+      </p>
+ <center>
+   <div class=".middleBig">
+   Last Emergency Evactuation:      
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
 
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sept 24, 2019 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</div>
+</center>
       <div id="town-image">
-        <%= link_to(image_tag('town.jpg', :alt => "town", :size => "1000x500"), "/static_pages/home") %></div>
+        <%= link_to(image_tag('town-zombies.jpg', :alt => "town", :size => "1000x500"), "/static_pages/home") %></div>
       </div>
 
       <div id="product-design-header">
@@ -42,9 +88,9 @@
 
       <p>
         <div id="info-area">
-          <%= link_to(image_tag('jobs.jpg', :class => "info-item", :size => "400x350"), "/static_pages/jobs") %>
-          <%= link_to(image_tag('living.jpg', :class => "info-item", :size => "400x350"), "/static_pages/living") %>
-          <%= link_to(image_tag('fun.jpg', :class => "info-item", :size => "400x350"), "/static_pages/fun") %>
+          <%= link_to(image_tag('jobs-zombies.jpg', :class => "info-item", :size => "400x350"), "/static_pages/jobs") %>
+          <%= link_to(image_tag('living-zombies.jpg', :class => "info-item", :size => "400x350"), "/static_pages/living") %>
+          <%= link_to(image_tag('fun-zombies.jpg', :class => "info-item", :size => "400x350"), "/static_pages/fun") %>
 
 
 
